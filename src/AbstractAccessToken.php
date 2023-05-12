@@ -117,7 +117,7 @@ abstract class AbstractAccessToken
 
             $this->setToken(
                 $token = $result['data'][$this->tokenJsonKey],
-                $this->expiresJsonKey ? $result[$this->expiresJsonKey] : null
+                $this->expiresJsonKey ? $result['data'][$this->expiresJsonKey] : null
             );
 
             return $token;
